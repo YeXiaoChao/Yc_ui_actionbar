@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.yanis.actionbar.TabActivity">
+        <activity android:name="com.yanis.actionbar.TabActivity" android:label="导航Tabs">
              <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.yanis.actionbar.MainActivity" />
