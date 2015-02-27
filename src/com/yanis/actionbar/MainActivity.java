@@ -1,7 +1,6 @@
 package com.yanis.actionbar;
 
 import java.lang.reflect.Method;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -17,18 +16,27 @@ import android.widget.ShareActionProvider;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
-	private Button btn1;
+	private Button btn1, btn2, btn3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setTitle("Yanis");
 		setContentView(R.layout.activity_main);
+
+		initView();
+
+	}
+
+	private void initView() {
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
-
 		btn1 = (Button) findViewById(R.id.btn1);
+		btn2 = (Button) findViewById(R.id.btn2);
+		btn3 = (Button) findViewById(R.id.btn3);
 		btn1.setOnClickListener(this);
+		btn2.setOnClickListener(this);
+		btn3.setOnClickListener(this);
 	}
 
 	@Override
@@ -55,10 +63,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			finish();
 			return true;
 		case R.id.write_p:
-			Toast.makeText(this, "浣犵偣鍑讳簡鈥滃彂甯冣�濇寜閿紒", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "你点击了“发布”按键！", Toast.LENGTH_SHORT).show();
 			return true;
 		case R.id.favo_p:
-			Toast.makeText(this, "浣犵偣鍑讳簡鈥滄敹钘忊�濇寜閿紒", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "你点击了“收藏”按键！", Toast.LENGTH_SHORT).show();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -87,7 +95,12 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.btn1:
 			startActivity(new Intent(MainActivity.this, TabActivity.class));
 			break;
-
+		case R.id.btn2:
+			startActivity(new Intent(MainActivity.this, CustomActivity.class));
+			break;
+		case R.id.btn3:
+			startActivity(new Intent(MainActivity.this, ListActivity.class));
+			break;
 		default:
 			break;
 		}

@@ -9,37 +9,37 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.view.MenuItem;
 
-public class TabActivity extends Activity {
+public class CustomActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_tab);
+		setContentView(R.layout.activity_custom);
 		initView();
 	}
 
 	private void initView() {
-		// æç¤ºgetActionBaræ–¹æ³•ä¸€å®šåœ¨setContentViewåé¢
+		// ÌáÊ¾getActionBar·½·¨Ò»¶¨ÔÚsetContentViewºóÃæ
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		// æ·»åŠ Tabé€‰é¡¹
+		// Ìí¼ÓTabÑ¡Ïî
 		Tab tab = actionBar
 				.newTab()
-				.setText("æ¾³é—¨é£äº‘2")
+				.setText("°ÄÃÅ·çÔÆ2")
 				.setTabListener(
 						new TabListener<Fragment1>(this, "film1",
 								Fragment1.class));
 		actionBar.addTab(tab);
 		tab = actionBar
 				.newTab()
-				.setText("äº”ååº¦ç°")
+				.setText("ÎåÊ®¶È»Ò")
 				.setTabListener(
 						new TabListener<Fragment2>(this, "film2",
 								Fragment2.class));
 		actionBar.addTab(tab);
 		tab = actionBar
 				.newTab()
-				.setText("çˆ¸çˆ¸å»å“ªå„¿2")
+				.setText("°Ö°ÖÈ¥ÄÄ¶ù2")
 				.setTabListener(
 						new TabListener<Fragment3>(this, "film3",
 								Fragment3.class));

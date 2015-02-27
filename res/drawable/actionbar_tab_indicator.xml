@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 选中，未点击 -->
+    <item android:drawable="@drawable/tab_unselected" android:state_pressed="false" android:state_selected="true"/>
+    <!-- 选中，点击 -->
+    <item android:drawable="@drawable/tab_selected" android:state_pressed="true" android:state_selected="true"/>
+    <!-- 未选中，未点击 -->
+    <item android:drawable="@drawable/tab_unselected_pressed" android:state_pressed="false" android:state_selected="false"/>
+    <!-- 未选中，点击 -->
+    <item android:drawable="@drawable/tab_selected_pressed" android:state_pressed="true" android:state_selected="false"/>
+
+</selector>

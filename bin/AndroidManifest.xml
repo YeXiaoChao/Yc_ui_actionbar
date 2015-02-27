@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="16"
         android:targetSdkVersion="21" />
 
     <application
@@ -23,10 +23,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.yanis.actionbar.TabActivity" android:label="导航Tabs">
-             <meta-data
+        <activity
+            android:name="com.yanis.actionbar.TabActivity"
+            android:label="Tab导航" >
+            <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.yanis.actionbar.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.yanis.actionbar.CustomActivity"
+            android:label="自定义样式"
+            android:parentActivityName="com.yanis.actionbar.MainActivity"
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name="com.yanis.actionbar.ListActivity"
+            android:label="下拉列表导航"
+            android:parentActivityName="com.yanis.actionbar.MainActivity" >
         </activity>
     </application>
 

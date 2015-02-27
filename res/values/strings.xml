@@ -4,4 +4,10 @@
     <string name="app_name">Action Bar</string>
     <string name="hello_world">Hello world!</string>
 
+    <string-array name="action_list">
+        <item>Fragment1</item>
+        <item>Fragment2</item>
+        <item>Fragment3</item>
+    </string-array>
+
 </resources>
